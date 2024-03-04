@@ -1,0 +1,64 @@
+[
+    {
+      "category": "Technology",
+      "title": "New Smartphone Release",
+      "body": "IT FELL IN the toilet. Your clumsy partner knocked a glass of water onto it. You forgot it was in your pocket when you jumped into the pool. That's just a few of the hundreds of ways your phone could come into life-threatening contact with liquid. Now what? Well, definitely don’t stick it in rice.\n\nFortunately, waterproofing has become mostly standard on modern phones. New iPhones, Samsung Galaxy devices, and Google’s newest Pixel phones all feature some degree of water resistance or waterproofing. How well a phone resists water is measured on an IP (or Ingress Protection) scale. If your phone is rated with a high number, like IP67 or IP68 protection, congratulations, it’s probably going to be fine if you drop it in the tub. If it’s got a lower rating, or none at all, you should prepare for the worst before you start chilling in the hot tub with your trusty Sidekick. And if your phone gets dropped into salt water or chlorinated water, it's doubly important to dry it off right away regardless of its IP rating.\n\nSo when your phone decides to take a dive, as soon as you're done freaking out, you'll probably begin frantically tapping all the buttons, blowing on it, stuffing it into a sack of rice, or blasting it with a hair dryer to quickly get rid of all that water. While those are all well-meaning actions, guess what? Each of those is totally the wrong approach. Here's the right way to rescue your water-damaged smartphone.\n\nFirst, retrieve it as quickly as possible. If your phone is still in the bottom of the jacuzzi or the toilet, get it out ASAP. The longer it's in the liquid, the greater the likelihood of damage will be.\n\nOnce the device is no longer submerged, power it off right away. Don’t try to press any of the other buttons or load any apps, just switch it off. Remove the case if you have one. If you have a phone with a removable battery, pop the battery out. You want to cut off power in the device as quickly as possible to prevent the possibility of a short circuit. Most of today’s smartphones don’t have removable batteries, but if yours lets you pop the battery out, do that.",
+
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Sports",
+      "title": "Football Championship",
+      "body": "Sed non urna. Integer placerat dolor et elit dignissim lacinia. Proin accumsan aliquet ligula.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Health",
+      "title": "Healthy Living Tips",
+      "body": "Vestibulum auctor dapibus neque. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Entertainment",
+      "title": "Movie Premiere Night",
+      "body": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Business",
+      "title": "Economic Growth Forecast",
+      "body": "Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Science",
+      "title": "Breakthrough Discovery",
+      "body": "Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Politics",
+      "title": "Election Updates",
+      "body": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Travel",
+      "title": "Exotic Destinations Revealed",
+      "body": "Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Fashion",
+      "title": "Fashion Trends for the Season",
+      "body": "Sed non urna. Integer placerat dolor et elit dignissim lacinia. Proin accumsan aliquet ligula.",
+      "image": "https://picsum.photos/800/600"
+    },
+    {
+      "category": "Environment",
+      "title": "Climate Change Awareness",
+      "body": "Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+      "image": "https://picsum.photos/800/600"
+    }
+  ]
+  
