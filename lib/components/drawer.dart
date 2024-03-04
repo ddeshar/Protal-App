@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:protal_app/Pages/aboutus.dart';
 import 'package:protal_app/Pages/loginScreen.dart';
 import 'package:protal_app/Pages/suggestion.dart';
+import 'package:protal_app/routes/app_pages.dart';
 import 'package:protal_app/utils/shared_preference.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -96,6 +98,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       MaterialPageRoute(
                           builder: (context) => const Suggestion()),
                     );
+                  },
+                ),
+                divider,
+                ListTile(
+                  title: const Text('Ex Call Api'),
+                  onTap: () {
+                    Get.toNamed(Routes.listViewImage);
                   },
                 ),
                 divider,

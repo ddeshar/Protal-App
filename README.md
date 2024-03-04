@@ -186,3 +186,42 @@ _ Login Form
 ![alt text](<img/Screenshot 2024-03-04 091136.png>)
 - Profile Page
 ![alt text](<img/Screenshot 2024-03-04 091515.png>)
+
+## How to call API
+
+- Adding Dio to Your Project
+  - Step 1. Open your pubspec.yaml file and add Dio to your dependencies:
+    ![alt text](<img/Screenshot 2024-03-05 011327.png>)
+  - Step 2. Run flutter pub get on terminal || cmd.
+    ![alt text](<img/Screenshot 2024-03-05 011502.png>)
+    
+    
+- Usage Dio
+  - Step 1. Import Dio in your Dart file:
+  - Step 2. Create a Dio instance:
+  - Step 3. Make a GET request and handle the response:
+    ![alt text](<img/Screenshot 2024-03-05 011613>)
+
+
+## Ex 
+
+- Using GetX for State Management in Flutter
+  - Step 1. Open your pubspec.yaml file and add GetX to your dependencies:
+    ![alt text](<img/Screenshot 2024-03-05 011327.png>)
+  -  Step 2. Run flutter pub get on terminal || cmd.
+    ![alt text](<img/Screenshot 2024-03-05 011502.png>)
+
+- Call Api 
+  - Step 1. Create image service
+    ![alt text](<img/Screenshot 2024-03-05 011613>)
+  - Step 2. Create image controller
+    ![alt text](<img/Screenshot 2024-03-05 013057>)
+  - Step 3. Call service image and map response to model
+    ![alt text](<img/Screenshot 2024-03-05 013449>)
+  - Step 4. Initialize the Controller
+    ![alt text](<img/Screenshot 2024-03-05 013317>)
+  - Step 5. Use the Controller in Your Widgets
+    - 1. Call function get image 
+    ![alt text](<img/Screenshot 2024-03-05 013650>)
+    - 2. Rebuild widget after call api success 
+    ![alt text](<img/Screenshot 2024-03-05 013833>)
