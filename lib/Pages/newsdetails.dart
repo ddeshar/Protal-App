@@ -15,6 +15,38 @@ class NewsDetailsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.network(
+              imgUrl,
+              height: 200.0,
+              width: MediaQuery.of(context).size.width,
+              fit:BoxFit.cover,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                body,
+                style: TextStyle(fontSize: 16.0),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
+
+// class RatingWidget extends StatefulWidget {
+//   const RatingWidget({super.key});
+
+//   @override
+//   _RatingWidgetState createState() => _RatingWidgetState();
+// }
+
+// class _RatingWidgetState extends State<RatingWidget>{
+
+// }
