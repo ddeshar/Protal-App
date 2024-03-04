@@ -4,8 +4,8 @@
 
 This project is designed as a practical introduction to developing with Flutter, focusing on creating a news application. It showcases Flutter's capabilities for crafting beautiful, natively compiled applications from a single codebase for mobile, web, and desktop.
 
-
 ## หลักการทำงานของ App
+
 ```mermaid
 graph TD;
     main["main.dart - Entry Point"] -->|Initializes| homepage["homepage.dart - Home Page"];
@@ -32,14 +32,55 @@ graph TD;
 
 ```
 lib/
-|- components/           # Reusable UI components (e.g., NewsCard, Drawer)
-|- Model/                # Data model classes
-|- Pages/                # Screens/pages of the app (e.g., HomePage, LoginScreen)
-|- services/             # Classes for handling external services (APIs)
-|- utils/                # Utility functions or classes
-|- viewmodel/            # View model classes for business logic
-|- main.dart             # Entry point of the application
+├── components/
+│   ├── drawer.dart              - Defines a reusable navigation drawer for the app.
+│   └── news_card.dart           - Defines the UI component for displaying individual news items in a card format.
+├── Model/
+│   └── newsmodel.dart           - Defines the data model for a news item.
+├── Pages/
+│   ├── aboutus.dart             - A page providing information about the organization or app.
+│   ├── homepage.dart            - The main page of the app, likely where news items are listed.
+│   ├── loginScreen.dart         - A page for user authentication.
+│   ├── newsdetails.dart         - A page for displaying detailed information about a selected news item.
+│   ├── splash_screen.dart       - The initial splash screen shown when the app is launched.
+│   └── suggestion.dart          - A page for users to submit suggestions or feedback.
+├── services/
+│   └── newsservices.dart        - Contains services for fetching news data, such as from a local JSON file or a remote API.
+├── utils/
+│   └── shared_preference.dart   - Utilizes shared preferences for storing simple data persistently across app launches.
+└── viewmodel/
+    └── newsviewmodel.dart       - Manages the state and logic for fetching and displaying news, acting as a view model.
 ```
+
+### Components
+
+- **drawer.dart**: Reusable navigation drawer widget for easy navigation throughout the app.
+- **news_card.dart**: Visual representation of a news article in a summarized card format, clickable to view details.
+
+### Model
+
+- **newsmodel.dart**: Represents the structure of news data, including fields like title, description, and imageUrl.
+
+### Pages
+
+- **aboutus.dart**: Informational page about the app or organization.
+- **homepage.dart**: The landing page where news articles are displayed, likely using `NewsCard` components.
+- **loginScreen.dart**: Handles user login functionality.
+- **newsdetails.dart**: Detailed view of a news article, accessed by clicking on a `NewsCard`.
+- **splash_screen.dart**: Initial screen shown during app startup, typically displaying a logo or brand name.
+- **suggestion.dart**: Allows users to submit feedback or suggestions.
+
+### Services
+
+- **newsservices.dart**: Responsible for fetching news data, which could be from a local asset or a remote server.
+
+### Utils
+
+- **shared_preference.dart**: Provides a mechanism for storing and retrieving user preferences or settings.
+
+### ViewModel
+
+- **newsviewmodel.dart**: Acts as an intermediary between the `newsservices` and UI components, managing the retrieval, storage, and updating of news data.
 
 ## Key Components
 
