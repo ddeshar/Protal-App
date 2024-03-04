@@ -1,3 +1,5 @@
+import 'package:flutter_svg/svg.dart';
+
 import 'package:flutter/material.dart';
 import 'package:protal_app/Pages/homepage.dart';
 
@@ -31,10 +33,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Image.asset(
-                    'assets/user.png',
-                    height: 100,
-                  ),
+                  SvgPicture.asset('assets/exat.svg', height: 100),
+                  // Image.asset(
+                  //   'assets/user.png',
+                  //   height: 100,
+                  // ),
                   const SizedBox(height: 50.0),
                   TextFormField(
                     controller: _emailController,

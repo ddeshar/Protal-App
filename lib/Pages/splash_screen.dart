@@ -1,3 +1,5 @@
+// Import flutter_svg package
+import 'package:flutter_svg/svg.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -40,15 +42,17 @@ class _SplashScreenState extends State<SplashScreen> {
   initScreen(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.lightBlueAccent,
+        color: const Color.fromARGB(255, 255, 204, 64),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset('assets/icon.png', height: 200),
+              // Use SvgPicture.asset instead of Image.asset for SVG files
+              SvgPicture.asset('assets/exat.svg', height: 200),
+              // Image.asset('assets/icon.png', height: 200),
               const Padding(padding: EdgeInsets.only(top: 20.0)),
               const Text(
-                "Protal APP",
+                "IT Department",
                 style: TextStyle(fontSize: 20.0, color: Colors.white),
               ),
               const Padding(padding: EdgeInsets.only(top: 20.0)),
