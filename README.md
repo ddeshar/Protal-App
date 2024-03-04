@@ -60,6 +60,73 @@ To get started with this project:
 3. Open a terminal in the project directory and run `flutter pub get` to install dependencies.
 4. Run `flutter run` to start the app on a connected device or emulator.
 
+## How news section works
+
+1. **NewsService**: Fetches news data from assets.
+2. **NewsModel**: Represents the data model for news items.
+3. **NewsController (ViewModel)**: Manages fetching, refreshing, and accessing news data.
+4. **NewsCard**: Displays individual news items in a card format.
+5. **NewsDetailsPage**: Shows detailed information about a selected news item.
+
+```mermaid
+graph TD
+    A[NewsService.getNews] --> B[NewsModel Instances]
+    B --> C[NewsController]
+    C -->|Fetch & Display News| D[NewsCard]
+    D --> E[NewsDetailsPage]
+    C -->|Refresh News| C
+
+    classDef default fill:#FFF,stroke:#333,stroke-width:2px;
+
+```
+
+This diagram illustrates the following steps:
+
+
+### 1. NewsService.getNews
+
+- **Responsibility**: This is where the application starts the process of fetching news data. It reads a JSON file from the assets directory, decodes the JSON into Dart objects, and maps each JSON object to an instance of `NewsModel`.
+- **Key Operations**:
+  - Reads the `news.json` file.
+  - Decodes the JSON data.
+  - Maps decoded data to `NewsModel` instances.
+
+### 2. NewsModel Instances
+
+- **Responsibility**: Represents the data model for a news item. Each instance holds the information for a single news item, such as the title, description, and image URL.
+- **Key Attributes**:
+  - `title`: The title of the news item.
+  - `desc`: A short description or body of the news item.
+  - `imgUrl`: The URL of the news item's associated image.
+
+### 3. NewsController (ViewModel)
+
+- **Responsibility**: Acts as the intermediary between the `NewsService` and the UI components (`NewsCard` and `NewsDetailsPage`). It manages the list of `NewsModel` instances, fetching new data as needed and providing a way to refresh the news items.
+- **Key Functions**:
+  - Fetches news data using `NewsService.getNews`.
+  - Stores the fetched news items in a list.
+  - Provides methods to refresh the news data and access the current list of news items.
+
+### 4. NewsCard
+
+- **Responsibility**: A UI component that displays a summary of a news item in a card format. It shows an image, title, and a brief description. When tapped, it navigates to the `NewsDetailsPage` for the selected news item, passing along the necessary data.
+- **Interactions**:
+  - Receives a `NewsModel` instance as input.
+  - Displays the news item's image, title, and description.
+  - On tap, navigates to the `NewsDetailsPage`.
+
+### 5. NewsDetailsPage
+
+- **Responsibility**: Displays detailed information about a selected news item. It shows a larger image, the full title, and the complete body text of the news item.
+- **Features**:
+  - Displays the news item's image in a prominent position.
+  - Shows the title and full body text of the news item.
+  - Optionally, could include interactive elements like a rating widget.
+
+### Refresh Loop
+
+- The diagram also illustrates a refresh loop originating from the `NewsController`. This indicates the ability to refresh the list of news items, fetching the latest data from the assets. This is crucial for keeping the app's content current and engaging.
+
 ## what's inside?
 
 This is the project to show basic widget information about flutter application
