@@ -2,6 +2,7 @@ import 'package:flutter_svg/svg.dart';
 
 import 'package:flutter/material.dart';
 import 'package:protal_app/Pages/homepage.dart';
+import 'package:protal_app/utils/shared_preference.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -112,6 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         setState(() {
                           email = _emailController.value.text;
                         });
+                        SharedPreferenced().setUserEmail(email);
+                        SharedPreferenced().setUserName("Ben");
+
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text('Login SuccessFul $email'),

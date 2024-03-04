@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:protal_app/Model/newsmodel.dart';
+import 'package:protal_app/components/drawer.dart';
 import 'package:protal_app/components/news_card.dart';
 import 'package:protal_app/viewmodel/newsviewmodel.dart';
 
@@ -25,6 +26,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Text("News App"),
         ),
+        drawer: DrawerWidget(),
         body: FutureBuilder<List<NewsModel>>(
           future: _controller.getNews(),
           builder: (context, snapshot) {
