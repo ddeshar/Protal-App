@@ -23,8 +23,10 @@ class NewsDetailsPage extends StatelessWidget {
               imgUrl,
               height: 200.0,
               width: MediaQuery.of(context).size.width,
-              fit:BoxFit.cover,
+              fit: BoxFit.cover,
             ),
+
+            const Center(child: RatingWidget()),
 
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -40,13 +42,35 @@ class NewsDetailsPage extends StatelessWidget {
   }
 }
 
-// class RatingWidget extends StatefulWidget {
-//   const RatingWidget({super.key});
+class RatingWidget extends StatefulWidget {
+  const RatingWidget({super.key});
 
-//   @override
-//   _RatingWidgetState createState() => _RatingWidgetState();
-// }
+  @override
+  _RatingWidgetState createState() => _RatingWidgetState();
+}
 
-// class _RatingWidgetState extends State<RatingWidget>{
+class _RatingWidgetState extends State<RatingWidget> {
+  int rating = 0;
 
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        children: List.generate(
+            5,
+            (index) => GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      rating = index + 1;
+                    });
+                  },
+                  child: Icon(
+                    Icons.star,
+                    color: index < rating ? Colors.yellow : Colors.grey,
+                  ),
+                )),
+      ),
+    );
+  }
+}
