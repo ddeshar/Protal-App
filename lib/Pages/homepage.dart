@@ -17,14 +17,48 @@ class _HomePageState extends State<HomePage> {
     _controller = NewsController();
   }
 
-  viewDidLoad() { }
+  viewDidLoad() {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("News App"),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text("News App"),
+        ),
+        body: FutureBuilder<List<NewsModel>>(
+          future: _controller.getNews(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text('Error: ${snapshot.error}'),
+              );
+            } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+              return const Center(
+                child: Text('No News Available'),
+              );
+            } else {
+              return RefreshIndicator(
+                onRefresh: () async {
+                  await _controller.refreshNews();
+                  setState(() {});
+                },
+                child: ListView.builder(
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (contect, index) {
+                      NewsModel news = snapshot.data![index];
+                      return NewsCard(
+                        imgUrl: news.image,
+                        title: news.title,
+                        desc: news.body,
+                      );
+                    }),
+              );
+            }
+          },
+        ));
   }
 }
