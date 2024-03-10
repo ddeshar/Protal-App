@@ -213,15 +213,15 @@ _ Login Form
 
 - Call Api 
   - Step 1. Create image service
-    ![alt text](<img/Screenshot 2024-03-05 011613>)
+    ![alt text](<img/Screenshot 2024-03-05 011613.png>)
   - Step 2. Create image controller
-    ![alt text](<img/Screenshot 2024-03-05 013057>)
+    ![alt text](<img/Screenshot 2024-03-05 013057.png>)
   - Step 3. Call service image and map response to model
-    ![alt text](<img/Screenshot 2024-03-05 013449>)
+    ![alt text](<img/Screenshot 2024-03-05 013449.png>)
   - Step 4. Initialize the Controller
-    ![alt text](<img/Screenshot 2024-03-05 013317>)
+    ![alt text](<img/Screenshot 2024-03-05 013317.png>)
   - Step 5. Use the Controller in Your Widgets
     - 1. Call function get image 
-    ![alt text](<img/Screenshot 2024-03-05 013650>)
+    ![alt text](<img/Screenshot 2024-03-05 013650.png>)
     - 2. Rebuild widget after call api success 
-    ![alt text](<img/Screenshot 2024-03-05 013833>)
+    ![alt text](<img/Screenshot 2024-03-05 013833.png>)
